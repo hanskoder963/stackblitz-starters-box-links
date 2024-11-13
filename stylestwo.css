@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://ashesofcreation.wiki/marsh_low.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  background-color: #333;
+  color: #e69710;
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+header h1 {
+  margin: 10px 30%;
+}
+
+.kort-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.kort {
+  background-color: #333;
+  color: #c1c1c1;
+  border: 2px solid #e69710;
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+  flex: 0 1 250px;
+}
+
+.kort a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.kort:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.kort a:hover {
+  background-color: #444;
+}
+
+.kort img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.kort:hover {
+  transform: scale(1.05); /* Forstørrer kortet litt ved hover */
+}
+
+footer {
+  position: fixed;
+  bottom: 0; /* Plasserer den nederst */
+  left: 0; /* Plasserer den helt til venstre */
+  width: 100%; /* Får footeren til å dekke hele bredden */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #e69710;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-height: 2rem;
+  place-items: center;
+  width: 5rem;
+  flex-shrink: 0;
+  text-align: center; /*Funker ikke?*/
+}
+
+.button:hover {
+  background-color: #c68d10;
+}
+
+.twitch-button {
+  background-color: #9146ff;
+  color: white;
+  padding: 3px 5px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.twitch-button:hover {
+  background-color: #7e38b0;
+}
+
+@media (max-width: 768) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  header h1 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header-buttons{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768)  {
+  .kort-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kort {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768)  {
+  footer {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+@media (min-width: 769px) {
+  .kort-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .kort {
+    flex: 0 1 250px;
+    margin: 15px;
+  }
+}
